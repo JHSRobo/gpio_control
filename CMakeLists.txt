@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(electromag)
+project(gpio_control)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -132,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/electromag_node.cpp)
+## add_executable(${PROJECT_NAME}_node src/electromag_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
