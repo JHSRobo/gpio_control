@@ -13,7 +13,7 @@ def toggleElectromag(pin):
     print("Changed pin {}".format(pin))
   else:
     print("Changed pin {} and added to pins list".format(pin))
-    GPIO.setup(pin, GPIO.out)
+    GPIO.setup(pin, GPIO.OUT)
     pins.append(pin)
     GPIO.output(pin, 1)
     
