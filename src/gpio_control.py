@@ -15,8 +15,7 @@ def toggleGPIO(pin):
     GPIO.setup(pin, GPIO.OUT)
     pins.append(pin)
     GPIO.output(pin, 1)
-    
-    
+
 
 if __name__ == "__main__":
   GPIO.setmode(GPIO.BOARD)
