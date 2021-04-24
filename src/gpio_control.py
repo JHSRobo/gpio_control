@@ -5,14 +5,13 @@ import rospy
 from std_msgs.msg import Int32 
 
 
-def toggleElectromag(pin):
-  print("Callback")
+def toggleGPIO(pin):
   pin = pin.data
   if pin in pins:
     GPIO.output(pin, int(GPIO.input(pin) == 0))
-    print("Changed pin {}".format(pin))
+    rospy.loginfo("Changed pin {}".format(pin))
   else:
-    print("Changed pin {} and added to pins list".format(pin))
+    rospy.loginfo("Changed pin {} and added to pins list".format(pin))
     GPIO.setup(pin, GPIO.OUT)
     pins.append(pin)
     GPIO.output(pin, 1)
@@ -21,10 +20,10 @@ def toggleElectromag(pin):
 
 if __name__ == "__main__":
   GPIO.setmode(GPIO.BOARD)
-  print("Setting up")
   pins = []
-  rospy.init_node("electromag", anonymous=True)
-  rospy.Subscriber("electromag", Int32, toggleElectromag)
-
+  rospy.init_node("gpio_control", anonymous=True)
+  rospy.Subscriber("gpio_control", Int32, toggleGPIO)
+  rospy.loginfo("gpio_control loaded")
+  
   rospy.spin()
   GPIO.cleanup()
