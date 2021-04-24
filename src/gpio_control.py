@@ -20,7 +20,7 @@ def toggleGPIO(pin):
 if __name__ == "__main__":
   GPIO.setmode(GPIO.BOARD)
   pins = []
-  rospy.init_node("gpio_control", anonymous=True)
+  rospy.init_node("gpio_control")
   rospy.Subscriber("gpio_control", Int32, toggleGPIO)
   rospy.loginfo("gpio_control loaded")
   
