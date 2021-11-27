@@ -22,7 +22,7 @@ if __name__ == "__main__":
   GPIO.setwarnings(False)
   pins = []
   rospy.init_node("gpio_control")
-  rospy.Subscriber("gpio_control", Int32, toggleGPIO)
+  rospy.Subscriber("/rov/gpio_control", Int32, toggleGPIO)
   rospy.loginfo("gpio_control loaded")
   
   rospy.spin()
