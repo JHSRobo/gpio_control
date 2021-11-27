@@ -3,6 +3,7 @@ ROS gpio_control package
 
 Toggles GPIO pins on and off based on the pin number that is sent to the topic /gpio_control
 
-For this year, GPIO pins for the electromagnets are on pins 11, 13, 15, 18
+gpio_reader.py publishes the statuses of all of the GPIO pins we are using.
+Those pins are GPIO numbers 4, 5, 6, 17, 22, 23, 24, 27
 
-For pwm controller we are using pin 32
+This currently does not have a use, but it may be used for electromagnets or whatever in the future.
