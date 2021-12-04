@@ -13,6 +13,12 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
 )
 
+#I HAVE NO IDEA IF THIS IS SUPPOSED TO BE IN THIS FILE, OR WHERE IT IS SUPPOSED TO GO.
+#IF STUFF IS BROKE, DELETE THIS CRAP
+#catkin_install_python(PROGRAMS scripts/gpio_status_server.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -47,17 +53,16 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-   Reader.msg
-)
+# add_message_files(
+#   FILES
+#   message1.msg
+#)
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   gpio_status.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(

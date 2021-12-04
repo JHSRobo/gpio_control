@@ -3,8 +3,7 @@
 import RPi.GPIO as GPIO
 import rospy
 import time
-print("bruh")
-from gpio_control.msg import Reader 
+from gpio_control.msg import Reader
 
 print("Imported")
 GPIO.setmode(GPIO.BCM)
