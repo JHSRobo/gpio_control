@@ -7,7 +7,7 @@ from gpio_control.msg import controlData
 
 # Yes, I know the following code is gross.
 # It makes it super simple to train newbies on, and we will be training a lot of newbies on this package.
-def toggleGPIO(gui_data)):
+def toggleGPIO(gui_data):
   
   # Set GPIO output for each pin equal to the value passed from the subscriber
   GPIO.output(3, gui_data.gpio_pin_3)
