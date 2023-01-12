@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 
+# For whatever reason, this script messes with the PATH, so we have to run this little command.
+# I have no idea why it works. Newbies, ignore this part.
+import sys
+import os
+sys.path.remove(os.path.dirname(__file__))
+
+from gpio_control.msg import controlData
 import RPi.GPIO as GPIO
 import rospy
 from std_msgs.msg import Bool
-from gpio_control.msg import controlData
 
 # Yes, I know the following code is gross.
 # It makes it super simple to train newbies on, and we will be training a lot of newbies on this package.
@@ -15,7 +21,6 @@ def toggleGPIO(gui_data):
   GPIO.output(7, gui_data.gpio_pin_7)
   GPIO.output(11, gui_data.gpio_pin_11)
   GPIO.output(13, gui_data.gpio_pin_13)
-
 # Main function
 if __name__ == "__main__":
   GPIO.setmode(GPIO.BOARD)
@@ -35,7 +40,7 @@ if __name__ == "__main__":
   
   # Create ROS Node and Subscriber
   rospy.init_node("gpio_control")
-  rospy.Subscriber("/control", Bool, toggleGPIO)
+  rospy.Subscriber("/control", controlData, toggleGPIO)
   
   #Stop the program from exiting
   rospy.spin()
