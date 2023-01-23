@@ -16,11 +16,11 @@ from std_msgs.msg import Bool
 def toggleGPIO(gui_data):
   
   # Set GPIO output for each pin equal to the value passed from the subscriber
-  GPIO.output(3, gui_data.gpio_pin_3)
-  GPIO.output(5, gui_data.gpio_pin_5)
   GPIO.output(7, gui_data.gpio_pin_7)
   GPIO.output(11, gui_data.gpio_pin_11)
   GPIO.output(13, gui_data.gpio_pin_13)
+  GPIO.output(15, gui_data.gpio_pin_15)
+  GPIO.output(19, gui_data.gpio_pin_19)
 # Main function
 if __name__ == "__main__":
   GPIO.setmode(GPIO.BOARD)
