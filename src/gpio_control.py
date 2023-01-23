@@ -27,16 +27,16 @@ if __name__ == "__main__":
   GPIO.setwarnings(False)
   
   # Initialize GPIOs in output mode
-  GPIO.setup(3, GPIO.OUT)
-  GPIO.output(3, 0)
-  GPIO.setup(5, GPIO.OUT)
-  GPIO.output(5, 0)
   GPIO.setup(7, GPIO.OUT)
   GPIO.output(7, 0)
   GPIO.setup(11, GPIO.OUT)
   GPIO.output(11, 0)
   GPIO.setup(13, GPIO.OUT)
   GPIO.output(13, 0)
+  GPIO.setup(15, GPIO.OUT)
+  GPIO.output(15, 0)
+  GPIO.setup(19, GPIO.OUT)
+  GPIO.output(19, 0)
   
   # Create ROS Node and Subscriber
   rospy.init_node("gpio_control")
