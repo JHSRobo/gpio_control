@@ -16,10 +16,10 @@ from std_msgs.msg import Bool
 def toggleGPIO(gui_data):
   
   # Set GPIO output for each pin equal to the value passed from the subscriber
-  GPIO.output(23, gui_data.gpio_pin_7)
-  GPIO.output(24, gui_data.gpio_pin_11)
-  GPIO.output(25, gui_data.gpio_pin_13)
-  GPIO.output(5, gui_data.gpio_pin_15)
+  GPIO.output(23, gui_data.gpio_pin_23)
+  GPIO.output(24, gui_data.gpio_pin_24
+  GPIO.output(25, gui_data.gpio_pin_25)
+  GPIO.output(5, gui_data.gpio_pin_5)
   GPIO.output(19, gui_data.gpio_pin_19)
   GPIO.output(16, gui_data.gpio_pin_16)
 # Main function
