@@ -24,7 +24,7 @@ def toggleGPIO(gui_data):
   GPIO.output(16, gui_data.gpio_pin_16)
 # Main function
 if __name__ == "__main__":
-  GPIO.setmode(GPIO.BOARD)
+  GPIO.setmode(GPIO.BCM)
   GPIO.setwarnings(False)
   
   # Initialize GPIOs in output mode
