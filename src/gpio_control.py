@@ -17,7 +17,7 @@ def toggleGPIO(gui_data):
   
   # Set GPIO output for each pin equal to the value passed from the subscriber
   GPIO.output(23, gui_data.gpio_pin_23)
-  GPIO.output(24, gui_data.gpio_pin_24
+  GPIO.output(24, gui_data.gpio_pin_24)
   GPIO.output(25, gui_data.gpio_pin_25)
   GPIO.output(5, gui_data.gpio_pin_5)
   GPIO.output(19, gui_data.gpio_pin_19)
