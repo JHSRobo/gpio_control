@@ -6,7 +6,7 @@ import sys
 import os
 sys.path.remove(os.path.dirname(__file__))
 
-from gpio_control.msg import controlData
+from launch_files.msg import controlData
 import RPi.GPIO as GPIO
 import rospy
 from std_msgs.msg import Bool
